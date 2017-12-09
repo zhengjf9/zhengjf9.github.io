@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://zhengjf9.github.io/2017/09/19/Numbers/index.html">
 <meta property="og:site_name" content="Jeff的博客">
 <meta property="og:description" content="题目来源 https://leetcode.com/problems/add-two-numbers/description/  题目描述You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of">
-<meta property="og:updated_time" content="2017-12-09T12:55:03.019Z">
+<meta property="og:updated_time" content="2017-12-09T12:56:14.705Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Add Two Numbers">
 <meta name="twitter:description" content="题目来源 https://leetcode.com/problems/add-two-numbers/description/  题目描述You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of">
@@ -193,6 +193,7 @@ var _hmt = _hmt || [];
 </blockquote>
 <h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
 <p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
+<a id="more"></a>
 <figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: (<span class="number">2</span> -&gt; <span class="number">4</span> -&gt; <span class="number">3</span>) + (<span class="number">5</span> -&gt; <span class="number">6</span> -&gt; <span class="number">4</span>)</span><br><span class="line">Output: <span class="number">7</span> -&gt; <span class="number">0</span> -&gt; <span class="number">8</span></span><br></pre></td></tr></table></figure>
 <h2 id="心理历程"><a href="#心理历程" class="headerlink" title="心理历程"></a>心理历程</h2><p>这道题在leetcode上的难度标示为Medium，但感觉不是太难，主要考查结构体和链表的运用。其中有些特殊情况，是在提交之后报错才知道的。比如，要考虑最高位的进位。还有一个关键点，就是两个链表长度不一致时，要把比较短的那个链表高位用0来代替。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>1.自己写的C++版解法，遇到的一个坑是，结构体等于NULL的时候，不能再指向下一个节点。（一开始天真地以为NULL的下一个节点还是NULL）</p>
