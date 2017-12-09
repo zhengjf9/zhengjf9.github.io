@@ -169,6 +169,107 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Delete and Earn" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/09/Delete and Earn/">Delete and Earn</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/09/Delete and Earn/" class="archive-article-date">
+  	<time datetime="2017-12-09T12:21:58.129Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##题目来源</p>
+<blockquote>
+<p><a href="https://leetcode.com/problems/delete-and-earn/" target="_blank" rel="noopener">https://leetcode.com/problems/delete-and-earn/</a></p>
+</blockquote>
+<p>##题目描述：<br>Given an array nums of integers, you can perform operations on the array.<br>In each operation, you pick any nums[i] and delete it to earn nums[i] points. After, you must delete every element equal to nums[i] - 1 or nums[i] + 1.<br>You start with 0 points. Return the maximum number of points you can earn by applying such operations.</p>
+<p>Example 1:</p>
+<blockquote>
+<p>Input: nums = [3, 4, 2] Output: 6 Explanation:  Delete 4 to earn 4<br>points, consequently 3 is also deleted. Then, delete 2 to earn 2<br>points. 6 total points are earned.</p>
+</blockquote>
+<p>Example 2:</p>
+<blockquote>
+<p>Input: nums = [2, 2, 3, 3, 3, 4] Output: 9 Explanation:  Delete 3 to<br>earn 3 points, deleting both 2’s and the 4. Then, delete 3 again to<br>earn 3 points, and 3 again to earn 3 points. 9 total points are<br>earned.</p>
+</blockquote>
+<p>Note:</p>
+<p>The length of nums is at most 20000.<br>Each element nums[i] is an integer in the range [1, 10000].</p>
+<p>##心路历程：<br>这道题是leetcode上面位于动态规划目录下的一道题，难度为Medium。刚开始看到这道题的时候，没什</p>
+<p>么思路，找不到很好的子问题。所以写了一个遍历并递归的算法，输入测试用例倒没什么问题，但是提交</p>
+<p>后运行只通过了10个测试样例，后面的全部超时。如下图：<br><img src="http://img.blog.csdn.net/20171205155901822?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhlbmdqZjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="错误答案"><br>于是看了答案，确实有一种醍醐灌顶的感觉。先把所有的数从小到大排个序（因为数的范围有限，所以可</p>
+<p>以使用桶排序）。这样，问题就变成从左往右依次考虑是否加入某个数。过程中使用use和avoid两个变量</p>
+<p>来分别记录加入和不加入当前数所得到的值。接着考虑下一个数，若与前一个数不连续。可以直接加入；若与前一个数连续，就要加上前一个数的avoid值。这里有一点要注意，每个数都有可能重复，但是它们</p>
+<p>要不全部加入，要么全部不加，这是因为当加入第一个这种数时，它的左右邻都会被删除，所以其它的相</p>
+<p>同的数没办法再被删除（因为没有邻居了）。leetcode上给了Java和Python的解法，下面给出了类似的</p>
+<p>C++解法。</p>
+<p>##解决方案：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">deleteAndEarn</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; nums)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> count[<span class="number">10001</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.size(); i++) count[nums[i]]++;</span><br><span class="line">		<span class="keyword">int</span> avoid = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> use = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> prev = <span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt;= <span class="number">10000</span>; ++k) &#123;</span><br><span class="line">			<span class="keyword">if</span> (count[k] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">				<span class="keyword">int</span> m = max(avoid, use);</span><br><span class="line">				<span class="keyword">if</span> (k - <span class="number">1</span> != prev) &#123;</span><br><span class="line">					use = k * count[k] + m;</span><br><span class="line">					avoid = m;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> &#123;</span><br><span class="line">					use = k * count[k] + avoid;</span><br><span class="line">					avoid = m;</span><br><span class="line">				&#125;</span><br><span class="line">				prev = k;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> max(avoid, use);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; nums;</span><br><span class="line">	nums.push_back(<span class="number">3</span>);</span><br><span class="line">	nums.push_back(<span class="number">4</span>);</span><br><span class="line">	nums.push_back(<span class="number">2</span>);</span><br><span class="line">	Solution solution;</span><br><span class="line">	<span class="keyword">int</span> result = solution.deleteAndEarn(nums);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; result&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-Leetcode -算法</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/09/Delete and Earn/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+   
+
+  
+
+  
     <article id="post-安卓开发第一站" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -367,6 +468,10 @@ MathJax.Hub.Queue(function() {
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">-Leetcode -算法</a>
+              </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Android</a>
