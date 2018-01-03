@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zhengjf9.github.io">
-  <title>算法题目--Maximum Length of Repeated Subarray | Jeff的博客</title>
+  <title>算法题目--Search a 2D Matrix II | Jeff的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目来源 https://leetcode.com/problems/maximum-length-of-repeated-subarray/description/  题目描述Given two integer arrays A and B, return the maximum length of an subarray that appears in both arrays. Example">
+  <meta name="description" content="题目来源 https://leetcode.com/problems/search-a-2d-matrix-ii/description/  题目描述Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:  Integer">
 <meta name="keywords" content="Leetcode,算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="算法题目--Maximum Length of Repeated Subarray">
-<meta property="og:url" content="https://zhengjf9.github.io/2018/01/02/Maximum Length of Repeated Subarray/index.html">
+<meta property="og:title" content="算法题目--Search a 2D Matrix II">
+<meta property="og:url" content="https://zhengjf9.github.io/2018/01/03/Search a 2D Matrix II/index.html">
 <meta property="og:site_name" content="Jeff的博客">
-<meta property="og:description" content="题目来源 https://leetcode.com/problems/maximum-length-of-repeated-subarray/description/  题目描述Given two integer arrays A and B, return the maximum length of an subarray that appears in both arrays. Example">
-<meta property="og:updated_time" content="2018-01-03T15:50:54.127Z">
+<meta property="og:description" content="题目来源 https://leetcode.com/problems/search-a-2d-matrix-ii/description/  题目描述Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:  Integer">
+<meta property="og:updated_time" content="2018-01-03T15:53:44.354Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="算法题目--Maximum Length of Repeated Subarray">
-<meta name="twitter:description" content="题目来源 https://leetcode.com/problems/maximum-length-of-repeated-subarray/description/  题目描述Given two integer arrays A and B, return the maximum length of an subarray that appears in both arrays. Example">
+<meta name="twitter:title" content="算法题目--Search a 2D Matrix II">
+<meta name="twitter:description" content="题目来源 https://leetcode.com/problems/search-a-2d-matrix-ii/description/  题目描述Write an efficient algorithm that searches for a value in an m x n matrix. This matrix has the following properties:  Integer">
   
     <link rel="alternative" href="/atom.xml" title="Jeff的博客" type="application/atom+xml">
   
@@ -168,20 +168,20 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Maximum Length of Repeated Subarray" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Search a 2D Matrix II" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      算法题目--Maximum Length of Repeated Subarray
+      算法题目--Search a 2D Matrix II
     </h1>
   
 
         
-        <a href="/2018/01/02/Maximum Length of Repeated Subarray/" class="archive-article-date">
-  	<time datetime="2018-01-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-02</time>
+        <a href="/2018/01/03/Search a 2D Matrix II/" class="archive-article-date">
+  	<time datetime="2018-01-02T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-03</time>
 </a>
         
       </header>
@@ -189,19 +189,21 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="题目来源"><a href="#题目来源" class="headerlink" title="题目来源"></a>题目来源</h2><blockquote>
-<p><a href="https://leetcode.com/problems/maximum-length-of-repeated-subarray/description/" target="_blank" rel="noopener">https://leetcode.com/problems/maximum-length-of-repeated-subarray/description/</a></p>
+<p><a href="https://leetcode.com/problems/search-a-2d-matrix-ii/description/" target="_blank" rel="noopener">https://leetcode.com/problems/search-a-2d-matrix-ii/description/</a></p>
 </blockquote>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>Given two integer arrays <code>A</code> and <code>B</code>, return the maximum length of an subarray that appears in both arrays.</p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">Input:</span></span><br><span class="line"><span class="symbol">A:</span> [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>]</span><br><span class="line"><span class="symbol">B:</span> [<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">7</span>]</span><br><span class="line"><span class="symbol">Output:</span> <span class="number">3</span></span><br><span class="line"><span class="symbol">Explanation:</span> </span><br><span class="line">The repeated subarray with maximum length is [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>].</span><br></pre></td></tr></table></figure>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>Write an efficient algorithm that searches for a value in an <em>m</em> x <em>n</em> matrix. This matrix has the following properties:</p>
+<ul>
+<li>Integers in each row are sorted in ascending from left to right.</li>
+<li>Integers in each column are sorted in ascending from top to bottom.</li>
+</ul>
+<p>For example,</p>
+<p>Consider the following matrix:</p>
 <a id="more"></a>
-<p><strong>Note:</strong></p>
-<ol>
-<li>1 &lt;= len(A), len(B) &lt;= 1000</li>
-<li>0 &lt;= A[i], B[i] &lt; 100</li>
-</ol>
-<h2 id="心路历程"><a href="#心路历程" class="headerlink" title="心路历程"></a>心路历程</h2><p>最长回文子串，最长回文子序列，最长公共子串，最长公共子序列都是学习动态规划老生常谈的问题了。本题类似于最长公共子串，可以通过画二维矩阵的方法，找到最长的对角线来解决。</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">findLength</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; A, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&amp; B)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> lenA = A.size();</span><br><span class="line">		<span class="keyword">int</span> lenB = B.size();</span><br><span class="line">		<span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">int</span> * temp = <span class="keyword">new</span> <span class="keyword">int</span>[lenA];</span><br><span class="line">		<span class="built_in">memset</span>(temp, <span class="number">0</span>, <span class="keyword">sizeof</span>(<span class="keyword">int</span>)*lenA);<span class="comment">//最开始写成sizeof(temp)报错</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; lenB; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = lenA - <span class="number">1</span>; j &gt;= <span class="number">0</span>; j--) &#123;</span><br><span class="line">				<span class="keyword">if</span> (B[i] == A[j]) &#123;</span><br><span class="line">					<span class="keyword">if</span> (j == <span class="number">0</span>) &#123;</span><br><span class="line">						temp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">						<span class="keyword">if</span> (max &lt; temp[<span class="number">0</span>]) max = temp[<span class="number">0</span>];</span><br><span class="line">					&#125;</span><br><span class="line">					<span class="keyword">else</span> &#123;</span><br><span class="line">						temp[j] = temp[j - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">						<span class="keyword">if</span> (max &lt; temp[j]) max = temp[j];</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> temp[j] = <span class="number">0</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">delete</span> temp;</span><br><span class="line">		<span class="keyword">return</span> max;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; A = &#123; <span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span> &#125;;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; B = &#123; <span class="number">3</span>,<span class="number">2</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">7</span> &#125;;</span><br><span class="line">	Solution solution;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; solution.findLength(A, B)&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">  [<span class="number">1</span>,   <span class="number">4</span>,  <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span>],</span><br><span class="line">  [<span class="number">2</span>,   <span class="number">5</span>,  <span class="number">8</span>, <span class="number">12</span>, <span class="number">19</span>],</span><br><span class="line">  [<span class="number">3</span>,   <span class="number">6</span>,  <span class="number">9</span>, <span class="number">16</span>, <span class="number">22</span>],</span><br><span class="line">  [<span class="number">10</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">17</span>, <span class="number">24</span>],</span><br><span class="line">  [<span class="number">18</span>, <span class="number">21</span>, <span class="number">23</span>, <span class="number">26</span>, <span class="number">30</span>]</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>Given <strong>target</strong> = <code>5</code>, return <code>true</code>.</p>
+<p>Given <strong>target</strong> = <code>20</code>, return <code>false</code>.</p>
+<h2 id="心路历程"><a href="#心路历程" class="headerlink" title="心路历程"></a>心路历程</h2><p>leetcode给出了两种解法。第一种是暴力解法，时间复杂度m*n,不太可取。第二种很巧妙，时间复杂度只有m + n。用的策略是从最后一行开始比较，若小于目标，往前移；若大于目标，行数减1。自己想到的方法是使用两层循环，第一层对行进行遍历，第二层在行内采用二分法。时间复杂度为mlog n。可以采用一些优化来加速算法。如行的第一个数就大于目标了，那显然结果是false；如果行的最后一个数已经小于目标，那么这一行也没有必要二分了。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">bool</span> <span class="title">searchMatrix</span><span class="params">(<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt;&amp; matrix, <span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> m = matrix.size();</span><br><span class="line">		<span class="keyword">if</span> (m == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;<span class="comment">//这一句和下面第二句一定要加，处理矩阵为空的情况</span></span><br><span class="line">		<span class="keyword">int</span> n = matrix[<span class="number">0</span>].size();</span><br><span class="line">		<span class="keyword">if</span> (n == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;<span class="comment">//</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (matrix[i][<span class="number">0</span>] &gt; target) <span class="keyword">return</span> <span class="literal">false</span>;<span class="comment">//第一个元素已经大于target，肯定找不到</span></span><br><span class="line">			<span class="keyword">if</span> (matrix[i][n - <span class="number">1</span>] &lt; target) <span class="keyword">continue</span>;<span class="comment">//改行最后一个元素小于target，继续下一行</span></span><br><span class="line">			<span class="keyword">if</span> (matrix[i][<span class="number">0</span>] == target || matrix[i][n - <span class="number">1</span>] == target)</span><br><span class="line">				<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">			<span class="keyword">int</span> start = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">int</span> end = n - <span class="number">1</span>;</span><br><span class="line">			<span class="keyword">int</span> middle = (start + end) / <span class="number">2</span>;</span><br><span class="line">			<span class="keyword">while</span> (<span class="number">1</span>) &#123;</span><br><span class="line">				<span class="keyword">if</span> (start == end || start == middle) &#123;<span class="comment">//无法再二分了</span></span><br><span class="line">					<span class="keyword">if</span> (matrix[i][start] == target || matrix[i][end] == target)</span><br><span class="line">						<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">					<span class="keyword">else</span> <span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (matrix[i][middle] == target) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">				<span class="keyword">if</span> (matrix[i][middle] &gt; target) &#123;<span class="comment">//中间元素比target大</span></span><br><span class="line">					end = middle - <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span> &#123;</span><br><span class="line">					start = middle + <span class="number">1</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				middle = (start + end) / <span class="number">2</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;&gt; matrix;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; row1 = &#123; <span class="number">1</span>, <span class="number">4</span>,  <span class="number">7</span>, <span class="number">11</span>, <span class="number">15</span> &#125;;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; row2 = &#123; <span class="number">2</span>, <span class="number">5</span>,  <span class="number">8</span>, <span class="number">12</span>, <span class="number">19</span> &#125;;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; row3 = &#123; <span class="number">3</span>, <span class="number">6</span>,  <span class="number">9</span>, <span class="number">16</span>, <span class="number">22</span> &#125;;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; row4 = &#123; <span class="number">10</span>, <span class="number">13</span>, <span class="number">14</span>, <span class="number">17</span>, <span class="number">24</span> &#125;;</span><br><span class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; row5 = &#123; <span class="number">18</span>, <span class="number">21</span>, <span class="number">23</span>, <span class="number">26</span>, <span class="number">30</span> &#125;;</span><br><span class="line">	matrix.push_back(row1);</span><br><span class="line">	matrix.push_back(row2);</span><br><span class="line">	matrix.push_back(row3);</span><br><span class="line">	matrix.push_back(row4);</span><br><span class="line">	matrix.push_back(row5);</span><br><span class="line">	Solution solution;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; solution.searchMatrix(matrix, <span class="number">25</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	system(<span class="string">"pause"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -305,7 +307,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://zhengjf9.github.io/2018/01/02/Maximum Length of Repeated Subarray/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://zhengjf9.github.io/2018/01/03/Search a 2D Matrix II/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -319,18 +321,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2018/01/02/Min Cost Climbing Stairs/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/01/03/Target Sum/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          算法题目--Min Cost Climbing Stairs
+          算法题目--Target Sum
         
       </div>
     </a>
   
   
-    <a href="/2017/12/27/Longest Palindromic Substring/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">算法题目--Longest Palindromic Substring</div>
+    <a href="/2018/01/02/Min Cost Climbing Stairs/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">算法题目--Min Cost Climbing Stairs</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -371,7 +373,7 @@ var _hmt = _hmt || [];
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Maximum Length of Repeated Subarray" data-title="算法题目--Maximum Length of Repeated Subarray" data-url="https://zhengjf9.github.io/2018/01/02/Maximum Length of Repeated Subarray/"></div>
+	<div class="ds-thread" data-thread-key="Search a 2D Matrix II" data-title="算法题目--Search a 2D Matrix II" data-url="https://zhengjf9.github.io/2018/01/03/Search a 2D Matrix II/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -393,7 +395,7 @@ var _hmt = _hmt || [];
   
    
   
-  <div id="SOHUCS" sid="Maximum Length of Repeated Subarray" ></div> 
+  <div id="SOHUCS" sid="Search a 2D Matrix II" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
